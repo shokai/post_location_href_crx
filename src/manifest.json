@@ -1,0 +1,32 @@
+{
+  "name":"test app",
+  "description":"this is test app",
+  "version": "0.0.1",
+  "background_page": "background.html",
+  "permissions": ["tabs" ,"http://*/*", "https://*/*"],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "test app",
+    "popup": "popup.html"
+  },
+  "icons": {
+    "128": "icon128.png",
+    "48": "icon48.png"
+  },
+  "content_scripts": [
+                      {
+                        "js": [
+                               "testapp.js"
+                              ],
+                        "css": [
+                                "testapp.css"
+                               ],
+                        "matches": [
+                                    "http://*/*",
+                                    "https://*/*",
+                                    "ftp://*/*"
+                                   ],
+                        "run_at": "document_start",
+                        "all_frames":true
+                      }]
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>test app</title>
+<script>
+var api_endpoint = "http://localhost:8888";
+
+chrome.self.onConnect.addListener(function(port, name) {
+    port.onMessage.addListener(function(info, con) {
+	    xhr = new XMLHttpRequest();
+	    xhr.open("POST", api_endpoint+"/page", true);
+	    xhr.setRequestHeader("Content-Type" , "application/x-www-form-urlencoded");
+	    xhr.send("url="+encodeURIComponent(info.url));
+	    port.postMessage({url:info.url});
+
+    });
+});
+</script>
+</html>
