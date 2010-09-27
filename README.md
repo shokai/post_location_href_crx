@@ -3,7 +3,7 @@ post location.href
 
 Description
 ===========
-this is test app for cross-domain XML HTTP Request.
+test app for cross-domain XML HTTP Request.
 
 
 Make Chrome Extension
@@ -16,11 +16,11 @@ Make Chrome Extension
 Install
 =======
 
-Drag and Drop ./package/test.crx to Chrome.
+Drag and Drop ./package/post_location_href.crx to Chrome.
 
 or
 
-    % open package/test.crx
+    % open package/post_location_href.crx
 
 How it work?
 ============

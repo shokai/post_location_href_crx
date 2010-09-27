@@ -1,12 +1,12 @@
 {
-  "name":"test app",
-  "description":"this is test app",
-  "version": "0.0.1",
+  "name":"post location.href",
+  "description":"POST location href to http://localhost:8888/page",
+  "version": "0.0.2",
   "background_page": "background.html",
   "permissions": ["tabs" ,"http://*/*", "https://*/*"],
   "browser_action": {
     "default_icon": "icon.png",
-    "default_title": "test app",
+    "default_title": "post location.href",
     "popup": "popup.html"
   },
   "icons": {
@@ -16,10 +16,10 @@
   "content_scripts": [
                       {
                         "js": [
-                               "testapp.js"
+                               "main.js"
                               ],
                         "css": [
-                                "testapp.css"
+                                "main.css"
                                ],
                         "matches": [
                                     "http://*/*",

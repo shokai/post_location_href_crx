@@ -7,7 +7,7 @@ task 'crxmake' do
   CrxMake.make(
                :ex_dir => "./src",
                #:pkey   => "./src.pem",
-               :crx_output => "./package/test.crx",
+               :crx_output => "./package/post_location_href.crx",
                :verbose => true,
                :ignorefile => /\.swp/,
                :ignoredir => /\.(?:svn|git|cvs)/
@@ -17,7 +17,7 @@ task 'crxmake' do
   CrxMake.zip(
               :ex_dir => "./src",
               #:pkey   => "./src.pem",
-              :zip_output => "./package/test.zip",
+              :zip_output => "./package/post_location_href.zip",
               :verbose => true,
               :ignorefile => /\.swp/,
               :ignoredir => /\.(?:svn|git|cvs)/
